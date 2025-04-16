@@ -216,7 +216,8 @@ script:
 
 	get_color_identity := {
 		land_ci := get_land_type_CI()
-		base_ci := color_identity_statistic()
+		##base_ci := color_identity_statistic()
+		base_ci := card_new_color()
 		## if base_ci is colorless and land_ci isn't, use land_ci
 		## if land and land_ci isn't blank, use both
 		## otherwise use base_ci
