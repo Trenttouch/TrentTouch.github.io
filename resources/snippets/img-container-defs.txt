@@ -31,6 +31,16 @@
 			effect.innerHTML += prettifyEffects(card_effects);
 			text.appendChild(effect);
 
+			const flavor = document.createElement("div");
+			flavor.className = "flavor";
+			let card_flavor = "";
+			if (card_stats.flavor_text != "[i][/i]")
+			{
+				card_flavor = card_stats.flavor_text.split("\n");
+			}
+			flavor.innerHTML += prettifyEffects(card_flavor);
+			text.appendChild(flavor);
+
 			if(card_stats.pt != "")
 			{
 				const pt = document.createElement("div");
@@ -81,6 +91,16 @@
 				}
 				effect_2.innerHTML += prettifyEffects(card_effects_2);
 				text.appendChild(effect_2);
+
+				const flavor_2 = document.createElement("div");
+				flavor_2.className = "flavor";
+				let card_flavor_2 = "";
+				if (card_stats.flavor_text != "[i][/i]")
+				{
+					card_flavor_2 = card_stats.flavor_text2.split("\n");
+				}
+				flavor_2.innerHTML += prettifyEffects(card_flavor_2);
+				text.appendChild(flavor_2);
 
 				if(card_stats.pt2 != "")
 				{
